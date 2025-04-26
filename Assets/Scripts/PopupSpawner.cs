@@ -2,41 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class PopupSpawner : MonoBehaviour
 {
+
     private Load load;
-    private float loadP;
     private bool doneSpawning = false;
 
     private IEnumerator coroutine;
 
     [SerializeField]
-    private GameObject[] ObjectsToSpawn;
+    public GameObject Popup;
 
     private void Awake()
     {
         load = FindFirstObjectByType<Load>();
         //loadP = load.getLoadPercentage();
-        coroutine = spawnEnemines();
+        coroutine = spawnPopups();
         StartCoroutine(coroutine);
     }
-    void Update() {
-        loadP = load.getLoadPercentage();
-        if (loadP == 100) {
-            doneSpawning = true;
-        } 
-    }
-    private IEnumerator spawnEnemines()
+    private IEnumerator spawnPopups()
     {
         while(!doneSpawning)
         {
-            yield return new WaitForSeconds(1);
-            int randEnemyOne = Random.Range(0, 1);
-            int randEnemyTwo = Random.Range(0, 1);
-
-            
-            Instantiate(ObjectsToSpawn[randEnemyOne], getSpawnPos(), Quaternion.identity);
-            Instantiate(ObjectsToSpawn[randEnemyTwo], getSpawnPos(), Quaternion.identity);
+            yield return new WaitForSeconds(2);
+            Instantiate(Popup, getSpawnPos(), Quaternion.identity);
 
             
         }
@@ -44,7 +33,7 @@ public class EnemySpawner : MonoBehaviour
     }
 
     private Vector3 getSpawnPos(){
-        float radius = 15;
+        float radius = 2;
 
         float angle = Random.Range(0f, Mathf.PI * 2);
 
@@ -55,5 +44,4 @@ public class EnemySpawner : MonoBehaviour
 
         return spawnPos;
     }
-    
 }
