@@ -298,7 +298,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      schmo_0: -4868103021395222175
+      schmo_1: 1477784865403615107
+      schmo_2: -2692632872655995159
+      schmo_3: 8586847116081977086
+      schmo_4: -2997890239148475125
+      schmo_5: 4739902286470192016
+      schmo_6: 849211713754677311
+      schmo_7: -1708133007319506123
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

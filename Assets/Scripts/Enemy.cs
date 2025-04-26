@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     [Header("Enemy Stats")]
     [SerializeField]
-    private int health;
+    protected int health;
     [SerializeField]
     private float moveSpeed;
 
@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     {
         load = FindFirstObjectByType<Load>();
     }
-    void Update()
+    protected void Update()
     {
         move();
         Die();
