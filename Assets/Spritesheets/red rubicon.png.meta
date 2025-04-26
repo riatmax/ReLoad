@@ -178,7 +178,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      red rubicon_0: -4181656316249921946
+      red rubicon_1: -739789811531615682
+      red rubicon_2: 8732910500480860583
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
