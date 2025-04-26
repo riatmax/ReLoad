@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     {
         load = FindFirstObjectByType<Load>();
     }
-    void Update()
+    protected void Update()
     {
         move();
         Die();
