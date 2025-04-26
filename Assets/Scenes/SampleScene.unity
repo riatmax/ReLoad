@@ -574,6 +574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 8
   moveSpeed: 1
+  scoreGiven: 0
   maxHealth: 8
 --- !u!212 &1295268924
 SpriteRenderer:
@@ -766,6 +767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   moveSpeed: 0.5
+  scoreGiven: 0
 --- !u!61 &1582686131
 BoxCollider2D:
   m_ObjectHideFlags: 0

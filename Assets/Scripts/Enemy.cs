@@ -9,12 +9,17 @@ public class Enemy : MonoBehaviour
     protected int health;
     [SerializeField]
     private float moveSpeed;
+    [SerializeField]
+    private int scoreGiven;
+
+    private GameManager gm;
 
     protected Load load;
 
     private void Awake()
     {
         load = FindFirstObjectByType<Load>();
+        gm = FindFirstObjectByType<GameManager>();
     }
     protected void Update()
     {
@@ -38,6 +43,7 @@ public class Enemy : MonoBehaviour
     {
         if (health <= 0)
         {
+            gm.addScore(scoreGiven);
             Destroy(gameObject);
         }
     }
@@ -50,5 +56,10 @@ public class Enemy : MonoBehaviour
             collision.gameObject.GetComponent<Load>().setHealth(collision.gameObject.GetComponent<Load>().getHealth() - 1);
             Destroy(gameObject);
         }
+    }
+
+    public int getScore()
+    {
+        return this.scoreGiven;
     }
 }
