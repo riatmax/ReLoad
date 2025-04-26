@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private float moveSpeed;
 
-    private Load load;
+    protected Load load;
 
     private void Awake()
     {
@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
     }
     void Update()
     {
-        followPlayer();
+        move();
         Die();
     }
 
@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
     }
 
     // follows player
-    private void followPlayer()
+    protected virtual void move()
     {
         Vector2 direction = (load.gameObject.transform.position - transform.position).normalized;
         transform.position += (Vector3)direction * moveSpeed * Time.deltaTime;
