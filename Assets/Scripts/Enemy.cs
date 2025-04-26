@@ -9,12 +9,17 @@ public class Enemy : MonoBehaviour
     protected int health;
     [SerializeField]
     private float moveSpeed;
+    [SerializeField]
+    private int scoreGiven;
+
+    private GameManager gm;
 
     protected Load load;
 
     private void Awake()
     {
         load = FindFirstObjectByType<Load>();
+        gm = FindFirstObjectByType<GameManager>();
     }
     protected void Update()
     {
@@ -30,14 +35,18 @@ public class Enemy : MonoBehaviour
     // follows player
     protected virtual void move()
     {
-        Vector2 direction = (load.gameObject.transform.position - transform.position).normalized;
-        transform.position += (Vector3)direction * moveSpeed * Time.deltaTime;
+        if (load != null)
+        {
+            Vector2 direction = (load.gameObject.transform.position - transform.position).normalized;
+            transform.position += (Vector3)direction * moveSpeed * Time.deltaTime;
+        }
     }
     // check if it dies
     private void Die()
     {
         if (health <= 0)
         {
+            gm.addScore(scoreGiven);
             Destroy(gameObject);
         }
     }
@@ -50,5 +59,10 @@ public class Enemy : MonoBehaviour
             collision.gameObject.GetComponent<Load>().setHealth(collision.gameObject.GetComponent<Load>().getHealth() - 1);
             Destroy(gameObject);
         }
+    }
+
+    public int getScore()
+    {
+        return this.scoreGiven;
     }
 }
