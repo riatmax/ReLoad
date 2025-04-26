@@ -85,7 +85,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -144,6 +144,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -151,10 +164,10 @@ TextureImporter:
       name: Loading Circle_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 154
-        width: 6
-        height: 6
+        x: 0
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,10 +185,10 @@ TextureImporter:
       name: Loading Circle_1
       rect:
         serializedVersion: 2
-        x: 51
-        y: 129
-        width: 13
-        height: 30
+        x: 32
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,10 +206,10 @@ TextureImporter:
       name: Loading Circle_2
       rect:
         serializedVersion: 2
-        x: 77
+        x: 64
         y: 128
-        width: 19
-        height: 28
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,8 +227,8 @@ TextureImporter:
       name: Loading Circle_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
+        x: 96
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -235,9 +248,9 @@ TextureImporter:
       name: Loading Circle_4
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 96
-        width: 31
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -256,9 +269,9 @@ TextureImporter:
       name: Loading Circle_5
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 96
-        width: 29
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -277,10 +290,10 @@ TextureImporter:
       name: Loading Circle_6
       rect:
         serializedVersion: 2
-        x: 96
-        y: 128
+        x: 64
+        y: 96
         width: 32
-        height: 24
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,9 +374,9 @@ TextureImporter:
       name: Loading Circle_10
       rect:
         serializedVersion: 2
-        x: 67
+        x: 64
         y: 64
-        width: 29
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -382,10 +395,10 @@ TextureImporter:
       name: Loading Circle_11
       rect:
         serializedVersion: 2
-        x: 97
+        x: 96
         y: 64
-        width: 31
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -406,7 +419,7 @@ TextureImporter:
         x: 0
         y: 32
         width: 32
-        height: 28
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -426,8 +439,8 @@ TextureImporter:
         serializedVersion: 2
         x: 32
         y: 32
-        width: 29
-        height: 25
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,8 +460,8 @@ TextureImporter:
         serializedVersion: 2
         x: 64
         y: 32
-        width: 19
-        height: 28
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -466,10 +479,10 @@ TextureImporter:
       name: Loading Circle_15
       rect:
         serializedVersion: 2
-        x: 97
-        y: 51
-        width: 12
-        height: 12
+        x: 96
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -487,10 +500,10 @@ TextureImporter:
       name: Loading Circle_16
       rect:
         serializedVersion: 2
-        x: 13
-        y: 26
-        width: 6
-        height: 6
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -507,14 +520,31 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ee6752d5201942c45885adcec86fbd7b
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Loading Circle_0: 8356447170403303556
+      Loading Circle_1: 7140939100880725260
+      Loading Circle_10: 5525820902523924255
+      Loading Circle_11: -414074750074169371
+      Loading Circle_12: -8967013166111943980
+      Loading Circle_13: -8728073876818708802
+      Loading Circle_14: -8434556252975345128
+      Loading Circle_15: -6963148514822454790
+      Loading Circle_16: 6327684984136551158
+      Loading Circle_2: -7479522689434517131
+      Loading Circle_3: 5031503852344466541
+      Loading Circle_4: -5937192665314372855
+      Loading Circle_5: 2783761608409617307
+      Loading Circle_6: -8286149711102287835
+      Loading Circle_7: -2130988966152965449
+      Loading Circle_8: 8104017397476238459
+      Loading Circle_9: 8859665500211792294
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
