@@ -23,4 +23,13 @@ public class Load : MonoBehaviour
         loadPercentage = Mathf.Clamp(loadPercentage, 0, 100);
         healthSlider.value = loadPercentage/100;
     }
+
+    public void setHealth(int health)
+    {
+        this.health = health;
+    }
+    public int getHealth()
+    {
+        return this.health;
+    } 
 }
