@@ -11,6 +11,10 @@ public class Sumo : Enemy
     private bool second_threshhold = false;
     private bool third_threshhold = false;
 
+    void Start(){
+        GetComponent<AudioSource>().Play();
+    }
+
     void Update()
     {
         base.Update();

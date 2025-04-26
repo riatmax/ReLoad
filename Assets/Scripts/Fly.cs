@@ -6,6 +6,9 @@ public class Fly : Enemy
 {
     [SerializeField]
     float rotateSpeed;
+    void Start(){
+        GetComponent<AudioSource>().Play();
+    }
     void Update()
     {
         float angle = Mathf.Atan2(load.gameObject.transform.position.y - transform.position.y, load.gameObject.transform.position.x - transform.position.x) * Mathf.Rad2Deg - 90f;

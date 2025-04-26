@@ -24,7 +24,7 @@ public class PopupSpawner : MonoBehaviour
     {
         while(!doneSpawning)
         {
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds((float)2.5);
             Instantiate(Popup, getSpawnPos(), Quaternion.identity);
 
             

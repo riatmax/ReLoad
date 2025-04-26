@@ -111,7 +111,6 @@ GameObject:
   - component: {fileID: 25039362394702825}
   - component: {fileID: 765458967183960388}
   - component: {fileID: 4797878894200132063}
-  - component: {fileID: 8844118899591958292}
   - component: {fileID: 8711675115201089964}
   m_Layer: 0
   m_Name: X_Button
@@ -201,33 +200,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6828e8f86f5c046f6a48a7af8907b5f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &8844118899591958292
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6526143580129144600}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &8711675115201089964
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -13,8 +13,13 @@ public class Load : MonoBehaviour
     [SerializeField]
     private float loadSpeedModifier; // how fast bar fills
 
+    [SerializeField]
+    private GameObject sumo; // sumo
+
     [Header("Loading Bar")]
     public Slider healthSlider; 
+
+    private bool sumoSpawned = false;
 
     private void Update()
     {
@@ -22,6 +27,7 @@ public class Load : MonoBehaviour
         loadPercentage += Time.deltaTime * loadSpeedModifier;
         loadPercentage = Mathf.Clamp(loadPercentage, 0, 100);
         healthSlider.value = loadPercentage/100;
+        spawnSumo();
     }
 
     public void setHealth(int health)
@@ -35,5 +41,25 @@ public class Load : MonoBehaviour
     public float getLoadPercentage()
     {
         return this.loadPercentage;
+    }
+
+    private void spawnSumo(){
+        if(loadPercentage == 100 && sumoSpawned == false){
+            Instantiate(sumo, getSpawnPos(), Quaternion.identity);
+            sumoSpawned = true;
+        }
+    }
+
+    private Vector3 getSpawnPos(){
+        float radius = 10;
+
+        float angle = Random.Range(0f, Mathf.PI * 2);
+
+        float x = Mathf.Cos(angle) * radius;
+        float y = Mathf.Sin(angle) * radius;
+
+        Vector3 spawnPos = new Vector3(transform.position.x + Mathf.Clamp(transform.position.y + y, -5, 5), 0);
+
+        return spawnPos;
     }
 }

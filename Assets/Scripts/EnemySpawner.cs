@@ -30,7 +30,7 @@ public class EnemySpawner : MonoBehaviour
     {
         while(!doneSpawning)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds((float)1.75);
             int randEnemyOne = Random.Range(0, 1);
             int randEnemyTwo = Random.Range(0, 1);
 
