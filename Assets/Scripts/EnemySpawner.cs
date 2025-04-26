@@ -16,16 +16,16 @@ public class EnemySpawner : MonoBehaviour
         load = FindFirstObjectByType<Load>();
         loadP = load.getLoadPercentage();
     }
-    /*private IEnumerator spawnEnemines()
+    private IEnumerator spawnEnemines()
     {
-        while(!doneSpawning)
+        while (!doneSpawning)
         {
             int randEnemyOne = Random.Range(0, 1);
             int randEnemyTwo = Random.Range(0, 1);
-            
+
             //Instantiate(ObjectsToSpawn[randEnemyOne], )
         }
-        
-    }*/
-    
+
+    }
+
 }

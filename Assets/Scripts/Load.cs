@@ -23,7 +23,13 @@ public class Load : MonoBehaviour
         loadPercentage = Mathf.Clamp(loadPercentage, 0, 100);
         healthSlider.value = loadPercentage/100;
     }
-
+    private void GameOver()
+    {
+        if (health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
     public void setHealth(int health)
     {
         this.health = health;
