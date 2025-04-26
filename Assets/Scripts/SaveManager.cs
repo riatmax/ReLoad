@@ -15,6 +15,7 @@ public class SaveManager : MonoBehaviour
     public void Save(SaveData data)
     {
         string json = JsonUtility.ToJson(data, true); // true = pretty format
+        string path = Application.persistentDataPath + "/playerData.json";
         File.WriteAllText(savePath, json);
         Debug.Log("Saved!");
     }

@@ -30,8 +30,7 @@ public class GameManager : MonoBehaviour
         if ((loadLoaded && load == null) || (bossLoaded && sumo == null))
         {
             SaveData loadedSave = sm.Load();
-            int highScore = loadedSave.score;
-            if (currentScore > highScore)
+            if (loadedSave == null)
             {
                 SaveData save = new SaveData();
                 save.score = currentScore;
@@ -40,8 +39,20 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                scoreText = "High Score: " + highScore;
+                int highScore = loadedSave.score;
+                if (currentScore > highScore)
+                {
+                    SaveData save = new SaveData();
+                    save.score = currentScore;
+                    sm.Save(save);
+                    scoreText = "High Score: " + currentScore;
+                }
+                else
+                {
+                    scoreText = "High Score: " + highScore;
+                }
             }
+            
             SceneManager.LoadScene("GameOverScene");
         }
     }

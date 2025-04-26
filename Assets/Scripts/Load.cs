@@ -22,6 +22,8 @@ public class Load : MonoBehaviour
         loadPercentage += Time.deltaTime * loadSpeedModifier;
         loadPercentage = Mathf.Clamp(loadPercentage, 0, 100);
         healthSlider.value = loadPercentage/100;
+
+        GameOver();
     }
     private void GameOver()
     {

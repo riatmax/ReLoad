@@ -35,8 +35,11 @@ public class Enemy : MonoBehaviour
     // follows player
     protected virtual void move()
     {
-        Vector2 direction = (load.gameObject.transform.position - transform.position).normalized;
-        transform.position += (Vector3)direction * moveSpeed * Time.deltaTime;
+        if (load != null)
+        {
+            Vector2 direction = (load.gameObject.transform.position - transform.position).normalized;
+            transform.position += (Vector3)direction * moveSpeed * Time.deltaTime;
+        }
     }
     // check if it dies
     private void Die()
