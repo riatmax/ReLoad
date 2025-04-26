@@ -32,4 +32,8 @@ public class Load : MonoBehaviour
     {
         return this.health;
     } 
+    public float getLoadPercentage()
+    {
+        return this.loadPercentage;
+    }
 }
