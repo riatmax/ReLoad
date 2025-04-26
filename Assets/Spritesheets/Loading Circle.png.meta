@@ -514,7 +514,24 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Loading Circle_0: 8356447170403303556
+      Loading Circle_1: 7140939100880725260
+      Loading Circle_10: 5525820902523924255
+      Loading Circle_11: -414074750074169371
+      Loading Circle_12: -8967013166111943980
+      Loading Circle_13: -8728073876818708802
+      Loading Circle_14: -8434556252975345128
+      Loading Circle_15: -6963148514822454790
+      Loading Circle_16: 6327684984136551158
+      Loading Circle_2: -7479522689434517131
+      Loading Circle_3: 5031503852344466541
+      Loading Circle_4: -5937192665314372855
+      Loading Circle_5: 2783761608409617307
+      Loading Circle_6: -8286149711102287835
+      Loading Circle_7: -2130988966152965449
+      Loading Circle_8: 8104017397476238459
+      Loading Circle_9: 8859665500211792294
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
